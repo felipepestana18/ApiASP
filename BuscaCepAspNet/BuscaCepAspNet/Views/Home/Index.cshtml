@@ -1,0 +1,25 @@
+﻿@model BuscaCepAspNet.Models.ClasseCep
+
+@{
+    ViewBag.Title = "Busca de Ceps";
+}
+
+<h1>Busca de Ceps Resultado</h1>
+
+<div class="col-md-6">
+    @Html.LabelFor(model => model.cep, new { @class = "control-label col-md-3" })
+    <div class="col-md-6">
+        @Html.EditorFor(model => model.cep,
+                           new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.cep)
+        &nbsp;
+    </div>
+</div>
+<p>Logradouro: @Model.logradouro</p>
+<p>Complemento: @Model.complemento</p>
+<p>Bairro: @Model.bairro</p>
+<p>Localidade: @Model.localidade</p>
+<p>Uf: @Model.uf</p>
+<p>Unidade: @Model.unidade</p>
+<p>IBGE: @Model.ibge</p>
+<p>GIA: @Model.gia</p>
